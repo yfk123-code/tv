@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Sony SAB",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Sony_SAB_logo.png/220px-Sony_SAB_logo.png",
+    "url": "STREAMING_URL_HERE.m3u8"
+  },
+  {
+    "name": "Star Plus",
+    "logo": "URL_TO_LOGO",
+    "url": "STREAMING_URL_HERE.m3u8"
+  }
+]

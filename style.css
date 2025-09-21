@@ -1,0 +1,153 @@
+/* आसान थीम मैनेजमेंट के लिए CSS वेरिएबल्स */
+:root {
+    --primary-color: #e50914;
+    --dark-color: #141414;
+    --light-dark-color: #1d1d1d;
+    --text-color: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-color);
+    color: var(--text-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+#search-bar {
+    padding: 0.5rem 1rem;
+    border: 1px solid #333;
+    border-radius: 20px;
+    background: var(--light-dark-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    width: 250px;
+    transition: width 0.3s ease;
+}
+
+#search-bar:focus {
+    width: 350px;
+}
+
+#channels-section h2 {
+    padding-left: 3rem;
+    margin-top: 2rem;
+    font-weight: 600;
+}
+
+#channels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 3rem;
+}
+
+/* --- 3D चैनल कार्ड --- */
+.channel-card {
+    background-color: var(--light-dark-color);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    /* यह 3D स्पेस बनाता है */
+    perspective: 1000px;
+}
+
+.channel-card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+}
+
+/* 3D होवर इफ़ेक्ट */
+.channel-card:hover .channel-card-inner {
+    transform: scale(1.05) rotateY(10deg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.channel-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.channel-name {
+    padding: 1rem;
+    font-weight: 400;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+/* --- वीडियो प्लेयर --- */
+#video-player-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+#video-player {
+    width: 80%;
+    max-width: 1200px;
+}
+
+#close-player {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* अगर लोगो लोड न हो तो प्लेसहोल्डर दिखाएं */
+.placeholder-logo {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 600;
+    background-color: #333;
+    color: var(--primary-color);
+}

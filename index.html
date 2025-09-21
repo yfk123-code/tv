@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian TV Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- बेहतर फ़ॉन्ट के लिए Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- HLS स्ट्रीमिंग के लिए hls.js लाइब्रेरी -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">MyTV<span>Hub</span></div>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="चैनल खोजें...">
+        </div>
+    </header>
+
+    <main>
+        <!-- वीडियो प्लेयर, जो शुरुआत में छिपा रहेगा -->
+        <div id="video-player-container" style="display:none;">
+            <video id="video-player" controls autoplay></video>
+            <button id="close-player">X</button>
+        </div>
+        
+        <section id="channels-section">
+            <h2>सभी चैनल्स</h2>
+            <div id="channels-grid">
+                <!-- चैनल कार्ड्स JavaScript से यहाँ लोड होंगे -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
