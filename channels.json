@@ -1,12 +1,12 @@
 [
   {
-    "name": "Sony SAB",
+    "name": "&flix",
     "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Sony_SAB_logo.png/220px-Sony_SAB_logo.png",
-    "url": "STREAMING_URL_HERE.m3u8"
+    "url": "https://edge3-moblive.yuppcdn.net/drm/smil:nflixdrm.smil/chunklist_b996000.m3u8"
   },
   {
-    "name": "Star Plus",
+    "name": "9x Jalwa",
     "logo": "URL_TO_LOGO",
-    "url": "STREAMING_URL_HERE.m3u8"
+    "url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/9x-jalwa/7bf890f0-225f-4dc3-9cdf-3ae2be3ef8ee/0.m3u8"
   }
 ]
